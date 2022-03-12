@@ -5,17 +5,17 @@ import './About.css';
 class About extends React.Component {
 
 
-    // changeBackground = () {
-    //     let bodyClx=document.body.classList,btnDark=document.querySelector('.btn-dark'),
-    // sysDark=window.matchMedia('(prefers-color-scheme: dark)'),
-    // darkVal=localStorage.getItem('dark'),
-    // setDark=a=>{bodyClx[a?'add':'remove']('dark'),
-    // localStorage.setItem('dark',a?'yes':'no')};
-    // setDark(darkVal?darkVal==='yes':sysDark.matches),
-    // requestAnimationFrame(()=>bodyClx.remove('not-ready')),
-    // btnDark.addEventListener('click',()=>setDark(!bodyClx.contains('dark'))),
-    // sysDark.addEventListener('change',a=>setDark(a.matches));
-    // }
+    changeBackground = () => {
+        let bodyClx=document.body.classList,btnDark=document.querySelector('.btn-dark'),
+    sysDark=window.matchMedia('(prefers-color-scheme: dark)'),
+    darkVal=localStorage.getItem('dark'),
+    setDark=a=>{bodyClx[a?'add':'remove']('dark'),
+    localStorage.setItem('dark',a?'yes':'no')};
+    setDark(darkVal?darkVal==='yes':sysDark.matches),
+    requestAnimationFrame(()=>bodyClx.remove('not-ready')),
+    btnDark.addEventListener('click',()=>setDark(!bodyClx.contains('dark'))),
+    sysDark.addEventListener('change',a=>setDark(a.matches));
+    }
 
     render() { 
         return (
@@ -26,7 +26,15 @@ class About extends React.Component {
                   <a id="btn-dark"></a>
                 </p>
                 {/* <script>
-                    {this.changeBackground()}
+                  let bodyClx=document.body.classList,btnDark=document.querySelector('.btn-dark'),
+                  sysDark=window.matchMedia('(prefers-color-scheme: dark)'),
+                  darkVal=localStorage.getItem('dark'), setDark=a=> {bodyClx[a ? "add" : "remove"]("dark"),
+                    localStorage.setItem("dark", a ? "yes" : "no"))
+                  }
+                  ; setDark(darkVal?darkVal==='yes':sysDark.matches),
+                  requestAnimationFrame(()=>bodyClx.remove('not-ready')),
+                  btnDark.addEventListener('click',()={">"}setDark(!bodyClx.contains('dark'))),
+                  sysDark.addEventListener('change',a={">"}setDark(a.matches));
                 </script> */}
                 <nav id="menu">
                   <a id="activelitt" href="/components/About">
